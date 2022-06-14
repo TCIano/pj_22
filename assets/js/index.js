@@ -22,6 +22,7 @@ function renderAvatar(data) {
     //拿到用户名
     const name = data.nickname || data.username;
     //如果有自定义头像则使用自定义头像如果没有则使用用户名开头大写为头像
+    $("#welcome").html(`欢迎 ${name}`);
     if (data.user_pic == null) {
         $('.layui-nav-img').hide();
         $('.text-avatar').html(name[0].toUpperCase())
