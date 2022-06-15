@@ -23,7 +23,6 @@ $(function () {
       content: $("#dialog-add").html(),
     });
   });
-
   //点击弹出层提交按钮提交数据
   $("body").on("submit", "#form-add", function (e) {
     e.preventDefault();
