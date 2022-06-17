@@ -60,8 +60,8 @@ $(function () {
   //提交事件
   $("#form-pub").submit(function (e) {
     e.preventDefault();
-    // 2. 基于 form 表单，快速创建一个 FormData 对象
-    var fd = new FormData($(this)[0]);
+    // 2. 基于 form 表单，快速创建一个 FormData (js原生)对象
+    let fd = new FormData($(this)[0]);
     // 3. 将文章的发布状态，存到 fd 中
     fd.append("state", art_state);
     // 4. 将封面裁剪过后的图片，输出为一个文件对象
@@ -80,7 +80,7 @@ $(function () {
         publishArt(fd);
       });
   });
-
+  //发布文章的函数
   const publishArt = (fd) => {
     $.ajax({
       method: "POST",
