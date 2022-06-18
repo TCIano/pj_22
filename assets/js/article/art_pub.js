@@ -81,7 +81,7 @@ $(function () {
       });
   });
   //发布文章的函数
-  const publishArt = (fd) => {
+  const publishArt = function (fd) {
     $.ajax({
       method: "POST",
       url: "/my/article/add",
@@ -94,7 +94,8 @@ $(function () {
         }
         layer.msg("发布文章成功");
         // 发布文章成功后，跳转到文章列表页面
-        location.href = "/article/art_list.html";
+        // 改变选中的文章状态
+        window.parent.change();
       },
     });
   };

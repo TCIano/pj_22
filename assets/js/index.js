@@ -44,6 +44,10 @@ $(".btnLogout").click(() => {
     }
   );
 });
+//切换页面
+function change() {
+  $("#change").addClass("layui-this").next().removeClass("layui-this");
+}
 
 //调用获取用户信息函数
 getUserInfo();
