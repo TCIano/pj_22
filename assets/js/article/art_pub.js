@@ -13,7 +13,7 @@ $(function () {
         //引用模板
         const htmlStr = template("tpl-cate", res);
         $("[name=cate_id]").html(htmlStr);
-        form.render();
+        form.render("select");
       },
     });
   };
@@ -94,7 +94,9 @@ $(function () {
         }
         layer.msg("发布文章成功");
         // 发布文章成功后，跳转到文章列表页面
+        location.href = "/article/art_list.html";
         // 改变选中的文章状态
+        // console.log($("#change"));
         window.parent.change();
       },
     });
