@@ -117,6 +117,7 @@ $("tbody").on("click", ".btn-delete", function (index) {
           // 如果 btnlen 的值等于1，证明删除完毕之后，页面上就没有任何数据了
           // 页码值最小必须是 1
           //页数不是第一页，页码值减一，第一页的话，页码值不变
+
           q.pagenum = q.pagenum === 1 ? 1 : q.pagenum - 1;
         }
         initArticleList();
